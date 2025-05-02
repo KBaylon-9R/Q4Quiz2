@@ -1,0 +1,39 @@
+body {
+    background-color: beige;
+    color: maroon;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    color: maroon;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input[type="number"] {
+    padding: 10px;
+    width: 200px;
+    border: 2px solid maroon;
+    border-radius: 5px;
+    font-size: 1em;
+}
+.form-container {
+    display: inline-block;
+    text-align: left;
+    background-color: white;
+    padding: 20px;
+    border: 2px solid maroon;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 600px;
+    height: 400px;
+}
+

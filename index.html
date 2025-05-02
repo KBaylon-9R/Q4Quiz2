@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- link to JS -->
+    <script src="main.js"></script>
+
+    <!-- Add style -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+</head>
+<body>
+
+<h1>Score Analyzer</h1>
+
+  <div class="form-container">
+
+	<details class="text-center">
+		<summary>Instructions</summary>
+		Put you're grade in each subject to see you're average
+	</details>
+
+    <label for="sco1">Science:</label>
+    <input type="number" id="sco1"><br>
+
+    <label for="sco2">Math:</label>
+    <input type="number" id="sco2"><br>
+
+    <label for="sco3">English:</label>
+    <input type="number" id="sco3"><br><br>
+
+    <button type="button" class="btn btn-primary" onclick="check()">Check</button>
+    <button type="button" class="btn btn-primary" onclick="window.location.reload()">Refresh</button>
+  </div>
+
+	<!-- AVRG-->
+<script>
+	function check(){
+		var sub1=Number(document.getElementById('sco1').value);
+		var sub2=Number(document.getElementById('sco2').value);
+		var sub3=Number(document.getElementById('sco3').value);
+		var scoreInput=(sub1+sub2+sub3)/3;
+
+		if (scoreInput >= 94){
+			alert('Excellent');
+		}
+		else if (scoreInput >= 87 && scoreInput <= 93.99){
+			alert('Above Satisfactory');
+			}
+		else if (scoreInput >=80 && scoreInput <= 86.99){
+			alert('Satisfactory');
+		}
+
+		else if (scoreInput >=75 && scoreInput <= 79.99){
+			alert('Needs Improvement');
+		}
+
+		else if (scoreInput >=70 && scoreInput <= 74.99){
+			alert('Poor');
+		}
+
+		else {
+			alert('very poor');
+		}
+	}
+</script>
+
+
+</body>
+</html>
